@@ -1,0 +1,7 @@
+{
+  "name": "taskMaximilian",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

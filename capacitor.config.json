@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "taskMaximilian",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
