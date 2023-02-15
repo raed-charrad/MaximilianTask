@@ -1,11 +1,11 @@
 <template>
     <ion-card >
-        <ion-card-header>
+        <ion-card-header class="ion-text-center">
             <ion-card-title>{{ memory.title }}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
             <ion-img :src="memory.image"></ion-img>
-            <p>{{ memory.description }}</p>
+            <p class="memory-description">{{ memory.description }}</p>
         </ion-card-content>
     </ion-card>
 </template>
@@ -37,5 +37,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
+    .memory-description {
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
 </style>

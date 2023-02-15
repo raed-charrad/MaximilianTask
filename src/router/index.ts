@@ -22,6 +22,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'MemoryDetail',
     component: () => import('../views/MemoryDetails.vue')
   },
+  {
+    path: '/new-memory',
+    name: 'NewMemory',
+    component: () => import('../views/AddMemoryPage.vue')
+  },
 ]
 
 const router = createRouter({
