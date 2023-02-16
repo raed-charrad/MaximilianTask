@@ -17,10 +17,10 @@ export default defineComponent({
     BaseLayout,
     MemoryOverview
  },
-  watch: {
-    '$route'(currentRoute){
-        this.memoryId = currentRoute.params.id
-    }
+    watch: {
+        '$route'(currentRoute){
+            this.memoryId = currentRoute.params.id
+        }
     },
     computed: {
         memory(): any {

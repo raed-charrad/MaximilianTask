@@ -1,7 +1,7 @@
 <template>
     <base-layout pageTitle="Add a Memory" pageDefaultBackPage="/memories">
         <h2>Add a Memory</h2> 
-        <create-memory-form @save-memory="saveMemory"></create-memory-form>
+        <create-memory-form @save-memory="saveMemory" @edit-memory="editMemory"></create-memory-form>
     </base-layout>
 </template>
 
@@ -22,6 +22,10 @@ export default defineComponent({
         return {
             saveMemory(memoryData: any) {
                 store.dispatch('addMemory', memoryData)
+                router.replace('/memories')
+            },
+            editMemory(memoryData: any) {
+                store.dispatch('editMemory', memoryData)
                 router.replace('/memories')
             }
         }

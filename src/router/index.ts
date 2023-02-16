@@ -23,7 +23,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/MemoryDetails.vue')
   },
   {
-    path: '/new-memory',
+    path: '/new-memory/:memoryId?',
     name: 'NewMemory',
     component: () => import('../views/AddMemoryPage.vue')
   },

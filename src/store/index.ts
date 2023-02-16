@@ -40,12 +40,31 @@ const store = createStore({
                 description: memoryData.description
             };
             state.memories.unshift(newMemory);
+        },
+        deleteMemory(state, memoryId) {
+            const memories = state.memories.filter((memory) => memory.id !== memoryId);
+            state.memories = memories;
+        },
+        editMemory(state : any, memoryData: any) {
+            const memoryIndex = state.memories.findIndex((memory : any) => memory.id === memoryData.memoryId);
+            const memory = state.memories[memoryIndex];
+            memory.title = memoryData.title;
+            memory.image = memoryData.image;
+            memory.description = memoryData.description;
         }
+        
     },
     actions: {
         addMemory(context, memoryData) {
             context.commit('addMemory', memoryData);
+        },
+        deleteMemory(context, memoryId) {
+            context.commit('deleteMemory', memoryId);
+        },
+        editMemory(context:any, memoryData :any ) {
+            context.commit('editMemory', memoryData);
         }
+
     },
     
     getters: {
